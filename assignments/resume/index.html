@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        const cvContainer = React.createElement("div", { className: "cv-container" }, [
+            React.createElement("h1", {}, " Muhammad Faizan"),
+            React.createElement("p", {}, "Front-End Developer"),
+            
+            React.createElement("section", { className: "contact-info" }, [
+                React.createElement("p", {}, "Email: muhammadf4060@gmail.com"),
+                React.createElement("p", {}, "Phone: +923 406044 359"),
+                React.createElement("p", {}, "Location: Malir-15, Karachi")
+            ]),
+
+            React.createElement("section", { className: "education" }, [
+                React.createElement("h2", {}, "Education"),
+                React.createElement("p", {}, "Bachelor’s in Computer Science - XYZ University (2018-2022)")
+            ]),
+
+            React.createElement("section", { className: "experience" }, [
+                React.createElement("h2", {}, "Experience"),
+                React.createElement("div", {}, [
+                    React.createElement("h3", {}, "Front-End Developer - SMIT"),
+                    React.createElement("p", {}, "Jan 2023 - Present"),
+                    React.createElement("ul", {}, [
+                        React.createElement("li", {}, "Developed interactive UI components using React.js"),
+                        React.createElement("li", {}, "Improved website performance by 30%"),
+                        React.createElement("li", {}, "Collaborated with back-end developers")
+                    ])
+                ])
+            ]),
+
+            React.createElement("section", { className: "skills" }, [
+                React.createElement("h2", {}, "Skills"),
+                React.createElement("ul", {}, [
+                    React.createElement("li", {}, "React.js"),
+                    React.createElement("li", {}, "JavaScript"),
+                    React.createElement("li", {}, "HTML & CSS"),
+                    React.createElement("li", {}, "Git & GitHub")
+                ])
+            ])
+        ]);
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(cvContainer);
+    </script>
+</body>
+</html>
